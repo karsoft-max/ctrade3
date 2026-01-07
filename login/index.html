@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link the JavaScript file (using 'defer' ensures HTML loads first) -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <form action="../homepage/index.html">
+            <label for="account-number">Account Number</label> 
+            <input  inputmode="numeric" type="text" id="account-number" placeholder="Account Number" class="error" data-error-id="acct-error" maxlength="10"   pattern="[0-9]*" >
+            <p id="acct-error" class="error-message">Cannot be empty</p>
+
+            <label for="password">Password</label>
+            <!-- Added maxlength="6" -->
+            <input  inputmode="numeric" type="password" id="password" placeholder="Password" class="error" data-error-id="pwd-error" maxlength="6"   pattern="[0-9]*" >
+            <p id="pwd-error" class="error-message">Cannot be empty</p>
+            
+            <div class="remember-login">
+                <input type="checkbox" id="remember-login" checked>
+                <label id="lightlabel" for="remember-login">Remember login</label>
+            </div>                      
+            
+            <div class="button">
+                <button type="submit" class="sign-in-button" disabled>SIGN IN</button>
+            </div>
+        </form>
+            <p class="forgot-password-link">Forgot Password?</p>  
+    </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+  --body-bg-color: #000000; 
+  --primary-color:  #ffa500; 
+  --secondary-color: #ffffff;
+  font-size: 16px;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+html {
+  -webkit-text-size-adjust: 100%; /* Prevents iOS from auto-resizing text */
+  font-size: 100%; /* Respects user browser settings */
+  scroll-behavior: smooth;
+}
+body {
+    background-color: var(--body-bg-color);
+    line-height: 1.5; /* Essential for readability on mobile */
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    padding: 30px;
+    background-color: var(--secondary-color);
+    max-width: 500px;          /* Limits the width on large screens */
+    width: 90%;                /* Ensures it is responsive on smaller screens */
+    margin: auto;              /* Centers the container horizontally */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    border-radius: 8px;        /* Optional: rounds the corners */
+    color: var(--primary-color);
+}
+label {
+    display: block;        
+    font-weight: 500;         
+    margin: 15px 0 8px 0;          /* Space between form groups */
+    color: var(--primary-color);
+}
+
+input, 
+input[type=password],
+input[type=email],
+input[type=tel],
+select {
+    width: 100%;               /* Makes input fill the available width */
+    padding: 15px;
+    margin: 0 0 10px 0;        /* IMPORTANT: This 10px bottom margin controls the gap before the error text */
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    box-sizing: border-box;    /* Ensures padding doesn't increase width */
+    font-size: 16px; 
+    font-family: inherit; 
+}
+
+/* This rule applies consistent highlighting when any of these fields are focused */
+input:focus, 
+input[type=password]:focus, 
+input[type=email]:focus,
+input[type=tel]:focus,
+select:focus { 
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Keep your existing .invalid-field CSS */
+input.invalid-field {
+    border: 1px solid #e74c3c !important;
+}
+.error-text {
+    color: #e74c3c; /* A nice error red color */
+    font-size: 0.9em;
+    display: block;
+    margin-bottom: 10px; /* Space after the error message before the next label */
+    height: 1em; /* Prevents layout jumping */
+    /* Added padding for alignment */
+    box-sizing: border-box;
+    font-weight: 400;
+}
+
+/* Overwrite default styles of hr */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Add a blue color to links */
+a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+/* Increase the physical size of the checkbox */
+input[type="checkbox"] {
+    width: 20px;   /* Set desired width (e.g., 20px) */
+    height: 20px;  /* Set desired height */
+    /* Ensure the checkbox itself aligns visually with the middle of the text */
+    vertical-align: middle; 
+    /* Optional: change the cursor when hovering over the checkbox */
+    cursor: pointer;
+    accent-color: var(--primary-color);
+}
+
+/* Ensure the text span aligns correctly next to the checkbox */
+label[for="terms"] span {
+    /* Flexbox on the label handles most alignment, but vertical-align is a good fallback */
+    vertical-align: middle; 
+    /* You can increase the font size here if the text looks too small compared to the box */
+    /* font-size: 16px; */
+    color: #FFA500; /* Vibrant Orange color from previous response */
+}
+/* register button styles  */
+.registerbtn {
+    background-color: #FFA500; 
+    color: white; 
+    font-weight: bold;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.registerbtn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+   input, 
+   input[type=password],
+   input[type=email],
+   input[type=tel],
+   select {
+        width: 100%;               
+        padding: 15px;
+        margin: 0 0 10px 0;        
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+        box-sizing: border-box;    
+        font-size: 16px; 
+    }
+}

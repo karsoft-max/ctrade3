@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --body-bg-color: #000000; 
+  --primary-color:  #ffa500; 
+  --secondary-color: #ffffff;
+  font-size: 16px;
+  
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans" , sans-serif;
+}
+html {
+  -webkit-text-size-adjust: 100%; /* Prevents iOS from auto-resizing text */
+  font-size: 100%; /* Respects user browser settings */
+  scroll-behavior: smooth;
+}
+body {
+    background-color: var(--body-bg-color);
+    line-height: 1.5; /* Essential for readability on mobile */
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+.hidden {
+    display: none;
+}
+.login-container {
+    background-color: var(--secondary-color);
+    padding: 25px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-top: 50px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+#lightlabel {
+      display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+input,
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--secondary-color); /* Default white background */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition */
+}
+input.error {
+    border-color: #e74c3c; /* Red border for errors */
+}
+/* This new class is added by JS when criteria is met */
+input.valid-input {
+    background-color: none; /* Light green background color */
+}
+.error-message {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+.remember-login {
+    display: flex; /* Aligns checkbox and label horizontally */
+    align-items: center; /* Centers them vertically */
+    margin-bottom: 25px; /* Adds space below the group */
+}
+
+.remember-login input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+    width: 16px; 
+    height: 16px;
+    vertical-align: middle;
+    accent-color: var(--primary-color); 
+}
+.sign-in-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.sign-in-button:enabled {
+    background-color: var(--primary-color); 
+    cursor: pointer;
+    opacity: 1;
+}
+/* This section controls the Sign In button layout */
+.button{
+    display: flex; /* Aligns the two buttons horizontally */
+    gap: 15px; /* Space between the sign-in button and the fingerprint button */
+    margin-bottom: 20px;
+}
+.sign-in-button {
+    flex-grow: 1; /* This makes the sign-in button take up all available extra space, making it large */
+    padding: 12px;
+    background-color: #ccc; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.forgot-password-link {
+    display: block; /* Ensures the link takes up the full width available */
+    text-align: center; /* Centers the text horizontally within that full width */
+    color: #999;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+.forgot-password-link:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+

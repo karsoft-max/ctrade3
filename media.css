@@ -1,0 +1,265 @@
+@media screen and (max-width: 480px) {
+.logo img {
+  width: 40px;  
+}
+.menubar ul li a {
+  font-size: 1.5rem;
+}
+.introcontainer {
+  height: 300px;
+}
+.overlay-text {
+  top: 45%;
+  font-size: 40px;
+}
+.introsub {
+  font-size: 15px;
+}
+h1.statsh1 {
+  font-size: 1.6rem;
+}
+.statsp {
+  font-size: 0.7rem;
+}
+#cryptoh2 {
+  font-size: 1.6rem;
+}
+.crypto-list {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+.cryptocontainer {
+  margin: 1px auto;
+}
+.bodymain {
+  flex-direction: column;
+  justify-content: start;
+  width: 85%;
+}
+.bodymain .bodytext {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 440px;
+}
+#bodyh1 {
+  margin: 2rem 2rem;
+  text-align: center;
+}
+.bodymain .bodyvid {
+width: 110%;
+margin: 15px 15px;
+height: auto;
+}
+.bodymain2 {
+  flex-direction: column;      /* Stacks vertically */
+  align-items: center;
+  padding: 10px 0;             /* Smaller total padding */
+}
+.bodymain2 .bodytextbox,
+.bodymain2 .bodyimgbox {
+  width: 95%;                  /* Use 95% width to give edges space */
+  height: auto;
+  margin: 0.5rem auto;         /* Smaller margins */
+  padding: 15px;
+}
+.bodymain2 .bodytextbox {
+  padding: 15px; /* Adds space inside the box on small screens */
+  height: 42rem;
+}
+#ctradeicon {
+  font-size: 2rem;
+  margin: 3rem 0 2rem 1rem;
+}
+#ht1 {
+  font-size: 1.5rem;
+}
+#ht2 {
+  font-size: 1rem;
+}
+.ctradep { 
+  margin: 0.1rem 1rem;
+}
+.ctradelist {
+  line-height: 1.5;
+  margin: 0.75rem 1rem;
+}
+
+.sctrade {
+   margin: 0 1rem;
+}
+.carousel .list .item .content{
+  padding-right: 0;
+}
+.carousel .list .item .content .title{
+  font-size: 30px;
+}
+.thumbnail .item{
+  width: 100px;
+  height: 150px;
+}
+.carousel .list .item .title,
+.carousel .list .item .dtitle,
+.carousel .list .item .topic{
+  font-size: 3em;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-right: 2rem;
+}
+.des,
+.ddes {
+  font-size: 0.75rem;
+}
+.status-container {
+  width: 95%;
+}
+.hdiwboxes {
+  display: flex;             /* Activate flexbox for the container */
+  flex-direction: column;    /* Stack the boxes vertically on phone */
+  align-items: center;       /* Centers the items horizontally within the wrapper */
+  margin: 1rem auto;  
+}
+.box1 {               /* Make boxes take up most of the screen width */
+  margin: 1rem auto;         /* Centers each individual box using auto margins */
+  display: block;            /* Ensures margin: auto works correctly */
+}
+.footer .container {
+  margin: 2rem 0.5rem; /* Centers the container on the page */
+}
+.footer-col h4{
+  margin: 0 2px 20px 2px;
+}
+.footer-col{
+  width: 100%;
+}
+.footer__links {
+  margin:0 2px 35px 2px;;
+}
+.footer-copyright {
+  border-top: 1px solid var(--primary-color); /* Thickness, style, and color */
+  padding: 20px 0px 10px 0px;
+  text-align: center;         /* Keep text centered */
+  margin: 5px auto;
+  width: 95%;
+  height: 0.4rem;
+}
+.footer-copyright p {
+  margin: 1rem 0;
+}
+.footer-copyright p {
+  font-size: 0.95rem;
+}
+}
+
+
+@media (min-width: 480px) and (max-width: 720px){
+.introcontainer {
+  height: 300px;
+}
+.overlay-text {
+  top: 45%;
+  font-size: 50px;
+}
+.introsub {
+  font-size: 20px;
+}
+.bodymain {
+  flex-direction: column;
+  justify-content: start;
+  width: 85%;
+}
+.bodymain .bodytext {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 440px;
+}
+#bodyh1 {
+  margin: 2rem 2rem;
+  text-align: center;
+}
+.bodymain .bodyvid {
+width: 110%;
+margin: 15px 15px;
+height: auto;
+}
+.bodymain2 {
+  flex-direction: column;      /* Stacks vertically */
+  align-items: center;
+  padding: 10px 0;             /* Smaller total padding */
+}
+.bodymain2 .bodytextbox,
+.bodymain2 .bodyimgbox {
+  width: 95%;                  /* Use 95% width to give edges space */
+  height: auto;
+  margin: 0.5rem auto;         /* Smaller margins */
+  padding: 15px;
+}
+.bodymain2 .bodytextbox {
+  padding: 15px; /* Adds space inside the box on small screens */
+  height: 42rem;
+}
+.carousel {
+  height: 40rem;
+}
+.carousel .list .item .content .title{
+  font-size: 50px;
+}
+.thumbnail .item{
+  width: 100px;
+  height: 150px;
+}
+.carousel .list .item .title,
+.carousel .list .item .dtitle,
+.carousel .list .item .topic{
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1.3em;
+  margin-right: 2rem;
+}
+.des,
+.ddes {
+  font-size: 1rem;
+}
+.status-container {
+  width: 100%;
+}
+#hdiwh1 {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+.hdiwboxes {
+  margin: 5rem 1.5rem; /* existing styles */
+  display: flex; /* Activate Flexbox */
+  justify-content: center; /* Center items horizontally within the container */
+  flex-wrap: wrap; /* Allow items to wrap to the next line if the screen is too narrow */
+  margin: 5rem 1.5rem; /* existing styles */
+  
+}
+.footer .container {
+  margin: 2rem 3rem; /* Centers the container on the page */
+}
+.footer-col h4{
+  margin: 0 2px 20px 2px;
+}
+.footer-col{
+  width: 100%;
+}
+.footer__links {
+  margin:0 2px 35px 2px;;
+}
+.footer-copyright {
+  border-top: 1px solid var(--primary-color); /* Thickness, style, and color */
+  padding: 20px 0px 10px 0px;
+  text-align: center;         /* Keep text centered */
+  margin: 5px auto;
+  width: 95%;
+  height: 0.4rem;
+}
+.footer-copyright p {
+  margin: 1rem 0;
+}
+.footer-copyright p {
+  font-size: 0.95rem;
+}
+}
+

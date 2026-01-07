@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You will be redirected shortly</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="centertext">
+    <h1 id="tradequote">
+        “The stock market is a device for transferring money from the impatient to the patient.” – Warren Buffett.
+    </h1>
+    </div>
+    
+   <script>
+  const texts = ["“Trading doesn’t just reveal your character; it also builds it if you stay in the game long enough.” - Yvan Byeajee", "“Confidence is not ‘I will profit on this trade.’ Confidence is ‘I will be fine if I don’t profit from this trade.” - Yvan Byeajee", "“Trading is very competitive and you have to be able to handle getting your butt kicked.” - Paul Tudor Jones", "“Hope is [a] bogus emotion that only costs you money.” -Jim Cramer", "“Never, ever argue with your trading system” - Michael Covel ",
+  "“Do more of what works and less of what doesn’t.” - Steve Clark","“Do not anticipate and move without market confirmation - being a little late in your trade is your insurance that you are right or wrong.” - Jesse Livermore","“Most traders take a good system and destroy it by trying to make it into a perfect system.” - Robert Prechter","“It was really later on when I decided that the reason there are so many technical indicators out there is because none of them work very well.” - Chuck Hayes",
+  "“The goal of a successful trader is to make the best trades. Money is secondary.” - Alexander Elder","“If most traders would learn to sit on their hands 50 percent of the time, they would make a lot more money.” - Bill Lipschutz","“There is a time to go long, a time to go short and a time to go fishing.” - Jesse Livermore","“I just wait until there is money lying in the corner, and all I have to do is go over there and pick it up. I do nothing in the meantime.” - Jim Rogers","“I believe in analysis and not forecasting.” - Nicolas Darvas",
+  "“Short-term volatility is greatest at turning points and diminishes as a trend becomes established.” - George Soros","“The core problem, however, is the need to fit markets into a style of trading rather than finding ways to trade that fit with market behaviour.” - Brett Steenbarger","“I always laugh at people who say, ‘I’ve never met a rich technician.’ I love that! It’s such an arrogant, nonsensical response. I used fundamentals for nine years and got rich as a technician.” - Martin Schwartz",
+  "“An investment in knowledge pays the best interest.” -Benjamin Franklin","“I know where I’m getting out before I get in.” - Bruce Kovner","“What seems too high and risky to the majority generally goes higher and what seems low and cheap generally goes lower.” - William O'Neil","“Markets can remain irrational longer than you can remain solvent.” -John Maynard Keynes","“All you need is one pattern to make a living.” - Linda Raschke","“Patterns don't work 100% of the time. But they are still critical because they help you define your risk. If you ignore patterns and focus on hunches, feelings, and hot tips, just forget about achieving consistency.” -Ifan Wei",
+  "“Novice Traders trade 5 to 10 times too big. They are taking 5 to 10 percent risk, on a trade they should be taking 1 to 2 percent risk on.” - Bruce Kovner","“Are you willing to lose money on a trade? If not, then don't take it. You can only win if you're not afraid to lose. And you can only do that if you truly accept the risks in front of you.” - Sami Abusaad","“You never know what kind of setup [the] market will present to you, your objective should be to find [an] opportunity where risk-reward ratio is best.” -Jaymin Shah",
+  "“In trading/investing, it’s not about how much you make but rather how much you don’t lose.” - Bernard Baruch","“I have two basic rules about winning in trading as well as in life: 1. If you don’t bet, you can’t win. 2. If you lose all your chips, you can’t bet.” - Larry Hite","“If you personalise losses, you can't trade.” - Bruce Kovner","“The elements of good trading are (1) cutting losses, (2) cutting losses, and (3) cutting losses. If you can follow these three rules, you may have a chance.” - Ed Seykota","“Letting losses run is the most serious mistake made by most investors.” - William O'Neil","“Accepting losses is the most important single investment device to ensure the safety of capital.” - Gerald M. Loeb",
+  "“The key to trading success is emotional discipline. If intelligence were the key, there would be a lot more people making money trading… I know this will sound like a cliche, but the single most important reason that people lose money in the financial markets is that they don’t cut their losses short.” -Victor Sperandeo","“It’s ok to be wrong; it’s unforgivable to stay wrong.” - Martin Zweig","    “In this business, if you’re good, you’re right six times out of ten. You’re never going to be right nine times out of ten.” - Peter Lynch","“Every trader has strengths and weaknesses. Some are good holders of winners but may hold their losers a little too long. Others may cut their winners a little short but are quick to take their losses. As long as you stick to your own style, you get the good and bad in your own approach.” - Michael Marcus",
+  "It’s not whether you’re right or wrong that’s important, it’s how much money you make when you’re right and how much you lose when you’re wrong”. - George Soros","“Dangers of watching every tick are twofold: overtrading and increased chances of prematurely liquidating good positions.” - Jack Schwagger","“Don’t worry about what the markets are going to do, worry about what you are going to do in response to the markets”. - Michael Carr","“You have to identify your weaknesses and work to change. Keep a trading diary – write down your reasons for entering and exiting every trade. Look for repetitive patterns of success and failure.” - Alexander Elder","“A lot of people get so enmeshed in the markets that they lose their perspective. Working longer does not necessarily equate with working smarter. In fact, sometimes is the other way around.” - Martin Schwartz",
+  "“A peak performance trader is totally committed to being the best and doing whatever it takes to be the best. He feels totally responsible for whatever happens and thus can learn from mistakes. These people typically have a working business plan for trading because they treat trading as a business.” - Van K. Tharp","“You don't need to be a rocket scientist. Investing is not a game where the guy with the 160 IQ beats the guy with 130 IQ.” - Warren Buffet","“We simply attempt to be fearful when others are greedy and to be greedy only when others are fearful.” - Warren Buffet",
+  ];
+  const textElement = document.getElementById("tradequote");
+
+  // 1. Get the index from the last visit (default to 0)
+  let currentIndex = parseInt(localStorage.getItem("lastQuoteIndex") || "0");
+
+  // 2. Show that specific text
+  textElement.textContent = texts[currentIndex];
+
+  // 3. Save the NEXT index for the next time they visit
+  let nextIndex = (currentIndex + 1) % texts.length;
+  localStorage.setItem("lastQuoteIndex", nextIndex);
+
+  // 4. Redirect
+  setTimeout(function() {
+    window.location.href = './homepage/index.html';
+  }, 5000);
+</script>
+
+</body>
+</html>
