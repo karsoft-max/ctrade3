@@ -1,0 +1,230 @@
+/* --- Phone/Mobile Specific Styles (Screen width 480px and smaller) --- */
+@media screen and (max-width: 480px) {
+
+    /* 1. Base Layout & Resets */
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Prevents horizontal scrolling if anything slightly exceeds the width */
+    }
+    .sidebar {
+        display: none; /* Hide the sidebar completely */
+        width: 0;
+    }
+    /* 2. Main Content Container (Handles Centering) */
+    .main-content {
+        margin: 0 !important; /* CRITICAL: Removes the 'margin-left: 250px;' from style.css */
+        padding: 0 1rem; /* Add overall safe padding to the screen edges */
+        
+        /* Flexbox: Centers all direct children horizontally */
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    /* 3. Header & Logo Adjustments */
+    .firstbar {
+        display: none; /* Hide desktop header */
+    }
+    .phonefirstbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--body-bg-color);
+        font-size: 1rem;
+        font-weight: 500;
+        /* Force this specific item to ignore parent's center rule and span full width */
+        align-self: stretch; 
+        margin: 1rem 0; /* Add vertical margins, remove horizontal ones since it stretches */
+        padding: 0 0; /* Add padding back for alignment with overall content */
+    }
+    .overwiew { 
+        font-size: 1.3rem;
+    }
+    .logo img {
+        width: 25px;
+    }
+    .blcdisplay {
+        height: 6.5rem;
+        padding: 0.5rem 1rem; 
+        box-sizing: border-box;
+        margin: auto;
+    }
+    .blcdisp { 
+        font-size: 1.8rem;
+        margin: 1rem 0rem;
+    }
+    /* General rules for blocks like blcdisplay, acctbasic, tradesum, etc. */
+    .blcdisplay,
+    .acctbasic,
+    .tradesum,
+    .swiftl {
+        width: 100%; /* Use a percentage width so margins can auto-center */
+        box-sizing: border-box; /* Ensures padding is included in the 95% width */
+        margin: 1rem auto; /* Ensures perfect horizontal centering */
+        /* Reset positioning conflicts */
+        position: relative !important;
+        left: auto !important; 
+        transform: none !important;
+    }
+    .acctbasic {
+        font-size: 1rem;
+    }
+    .swiftlinks {
+        font-size: 1rem;
+    }
+    /* 5. Grid Container (sWiftLinks) */
+    .grid-container {
+        display: grid;
+        /* Keep the 4 columns as requested, making it responsive */
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
+        gap: 0.5rem; 
+        padding: 0.5rem; 
+        width: 90%; /* Match width of other centered blocks */
+        box-sizing: border-box;
+        justify-items: center; 
+    }
+    .box {
+        /* Center content inside each individual box */
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center; 
+        text-align: center;
+        background-color: transparent; 
+        border: none;
+        width: 40px;
+        height: 60px;
+    }
+    #swifticon {
+        font-size: 2.5rem;
+        margin: 2px 2px;
+    }
+    .swiftp {
+        font-size: 0.7rem; 
+        margin-top: 5px;
+    }
+    /* 6. HR Line and Footer */
+    .swiftlinkhr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lastbar {
+        text-align: center;
+        position: relative;
+        margin-top: 3rem;
+    }
+}
+
+
+@media (min-width: 480px) and (max-width: 720px){
+
+    .sidebar {
+        display: none; /* Hide the sidebar completely */
+        width: 0;
+    }
+    /* 2. Main Content Container (Handles Centering) */
+    .main-content {
+        margin: 0 !important; /* CRITICAL: Removes the 'margin-left: 250px;' from style.css */
+        padding: 0 1rem; /* Add overall safe padding to the screen edges */
+        
+        /* Flexbox: Centers all direct children horizontally */
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    /* 3. Header & Logo Adjustments */
+    .firstbar {
+        display: none; /* Hide desktop header */
+    }
+    .phonefirstbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--body-bg-color);
+        font-size: 1rem;
+        font-weight: 500;
+        /* Force this specific item to ignore parent's center rule and span full width */
+        align-self: stretch; 
+        margin: 1rem 0; /* Add vertical margins, remove horizontal ones since it stretches */
+        padding: 0 0; /* Add padding back for alignment with overall content */
+    }
+    .overwiew { 
+        font-size: 1.3rem;
+    }
+    .logo img {
+        width: 35px;
+    }
+    .blcdisplay {
+        height: 6.5rem;
+        padding: 0.5rem 1rem; 
+        box-sizing: border-box;
+        margin: auto;
+    }
+    .blcdisp { 
+        font-size: 1.8rem;
+        margin: 1rem 0rem;
+    }
+    /* General rules for blocks like blcdisplay, acctbasic, tradesum, etc. */
+    .blcdisplay,
+    .acctbasic,
+    .tradesum,
+    .swiftl {
+        width: 100%; /* Use a percentage width so margins can auto-center */
+        box-sizing: border-box; /* Ensures padding is included in the 95% width */
+        margin: 1rem auto; /* Ensures perfect horizontal centering */
+        /* Reset positioning conflicts */
+        position: relative !important;
+        left: auto !important; 
+        transform: none !important;
+    }
+    .acctbasic {
+        font-size: 1rem;
+    }
+    .swiftlinks {
+        font-size: 1rem;
+    }
+    /* 5. Grid Container (sWiftLinks) */
+    .grid-container {
+        display: grid;
+        /* Keep the 4 columns as requested, making it responsive */
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr)); 
+        gap: 0.5rem; 
+        padding: 0.5rem; 
+        width: 90%; /* Match width of other centered blocks */
+        box-sizing: border-box;
+        justify-items: center; 
+    }
+    .box {
+        /* Center content inside each individual box */
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+        justify-content: center; 
+        text-align: center;
+        background-color: transparent; 
+        border: none;
+        width: 40px;
+        height: 60px;
+    }
+    #swifticon {
+        font-size: 2.5rem;
+        margin: 2px 2px;
+    }
+    .swiftp {
+        font-size: 0.7rem; 
+        margin-top: 5px;
+    }
+    /* 6. HR Line and Footer */
+    .swiftlinkhr {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .lastbar {
+        text-align: center;
+        position: relative;
+        margin-top: 3rem;
+    }
+}
+

@@ -1,0 +1,262 @@
+
+:root {
+  --body-bg-color: #000000;
+  --primary-color:  #ffa500; 
+  --secondary-color: #ffffff;
+  --toggle-off-bg: #ccc; /* Gray color when switch is off (balance shown) */
+  --toggle-on-bg: #ffa500; /* primary color when switch is on (balance hidden) */
+  font-size: 16px;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%; /* Prevents iOS from auto-resizing text */
+  font-size: 100%; /* Respects user browser settings */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  line-height: 1.5; /* Essential for readability on mobile */
+  -webkit-font-smoothing: antialiased;
+}
+/* sidebar  */
+.sidebar {
+  height: 100%;
+  width: 250px; /* Fixed width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--primary-color); /* Dark dashboard theme */
+  padding-top: 20px;
+}
+.sidebar a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--body-bg-color);
+  display: block;
+  transition: 0.3s;
+}
+.sidebar a:hover {
+  color: var(--primary-color);
+  background-color: var(--body-bg-color);
+}
+.nav-item {
+  word-spacing: 1rem;
+}
+.nav-item.active {
+  background-color: var(--body-bg-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.nav-item.active:hover {
+  background-color: var(--body-bg-color);
+  color: var(--primary-color);
+}
+/* side bar end   */
+.main-content {
+  margin-left: 250px; /* Same as sidebar width */
+  padding: 20px;
+  color: var(--primary-color);
+}
+.firstbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: var(--body-bg-color);
+  font-size: 1rem;
+  font-weight: 500;
+}
+.phonefirstbar {
+  display: none;
+}
+.overwiew {
+  font-size: 1.5rem;
+}
+.logo img {
+  width: 50px;
+}
+/* blcdisplay  */
+.blcdisplay {
+  position: relative;
+  background-color: var(--secondary-color);
+  height: 7rem;
+  color: var(--body-bg-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; /* Added padding to the container itself for clean edges */
+  margin-top: 1rem;
+  width: 100%; /* Or a fixed width like 400px; required for auto-margins to work */
+
+}
+.blctxt {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: var(--primary-color);
+}
+.balance-row {
+  display: flex;
+  justify-content: space-between; /* Pushes content to the far ends */
+  align-items: center; /* Vertically centers the text */
+}
+.blcdisp {
+  font-weight: bold;
+  font-size: 3rem;
+  margin: 0; 
+  word-spacing: -0.2rem;
+  color: var(--primary-color);
+}
+.hide-balance-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: var(--body-bg-color); /* Assuming the secondary color is black */
+}
+.toggle-checkbox {
+  display: none; 
+}
+.toggle-label {
+  position: relative;
+  display: block;
+  width: 40px; /* Width of the track */
+  height: 22px; /* Height of the track */
+  background-color: var(--toggle-off-bg);
+  border-radius: 22px; /* Makes it pill-shaped */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.toggle-label::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px; /* Size of the circle */
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.toggle-checkbox:checked + .toggle-label {
+  background-color: var(--toggle-on-bg); /* Changes to green when checked */
+}
+.toggle-checkbox:checked + .toggle-label::after {
+  transform: translateX(18px); /* Slides the circle to the right */
+}
+/* blc display end  */
+/* acctbasic  */
+.acctbasic {
+    position: relative;
+    margin-top: 2%;
+    word-spacing: 0.5rem;
+    font-size: 1.5rem;
+}
+.acctnumactive {
+  /* display: none;  */
+}
+.acctnumnotactive {
+  display: none; 
+}
+.acctbasichr {
+  border: 0;
+  border-top: 1px solid var(--secondary-color); /* Change to your desired color */
+  margin: 10px 0;
+}
+/* acctbasic end  */
+/* tradesum  */
+.tradesum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  line-height: 1;
+  margin-top: 3%;
+  background-color: white;
+  border-radius: 0.3rem;
+  color: var(--body-bg-color);
+}
+.tradeinfo {
+  font-size: 1.5rem;
+  color: var(--primary-color)
+}
+.tnonactive {
+  display: none;
+}
+.tactive{
+  /* display: none;  */
+}
+/* tradesum end  */
+/* swift l  */
+.swiftl{
+  margin: 1.5rem 0 1rem 0;
+}
+.swiftlinks {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.swiftlinkhr {
+  border: 0;
+  border-top: 1px solid var(--secondary-color); /* Change to your desired color */
+  margin: 10px 0;
+}
+.grid-container {
+    display: grid;
+    /* Creates 4 columns of equal flexible width */
+    grid-template-columns: repeat(4, 1fr); 
+    /* Creates a gap between all grid items */
+    gap: 1rem; 
+    padding: 2rem; /* Add some padding around the entire grid */
+    max-width: 1200px; /* Optional: limits the max width of the grid */
+    margin: 0 auto; /* Centers the grid container on the page */
+}
+.box {
+    /* Set a specific aspect ratio for perfect squares */
+    aspect-ratio: 1 / 1; 
+    display: grid;
+    place-items: center; /* Centers content perfectly inside each box */
+    width: 100%; /* Ensures they fill the grid cell width */
+}
+.boxcontainer {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none; /* Red outer border */
+    /* Centering the text inside this container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#swifticon {
+   font-size: 7rem;
+  margin: 2px 2px;
+  color: var(--primary-color);
+}
+.box:hover .swiftp, 
+.box:hover #swifticon {
+    color: var(--secondary-color);      /* Change to your desired color */
+    transform: scale(1.1); /* Example: both grow slightly */
+    opacity: 1;          /* Example: both become fully visible */
+}
+.swiftp, #swifticon {
+    transition: all 0.3s ease-in-out;
+    display: inline-block; /* Required for transform/scale to work on icons */
+}
+/* swiftl end  */
+.lastbar {
+  background-color: var(--primary-color);
+  text-align: center;
+  position: relative;
+  margin-top: 3rem;
+  width: 100%;
+}

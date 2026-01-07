@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Overview - Apice Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="script.js"></script>
+</head>
+<body>
+<!-- sidebar  -->
+<div class="sidebar">
+  <ul class="nav-links">
+    <li><a href="#" class="nav-item active"><i class="fa-solid fa-list"></i> Overview</a></li>
+    <li><a href="#" class="nav-item"><i class="fa-solid fa-user"></i> Profile</a></li>
+    <li><a href="#" class="nav-item"><i class="fa-solid fa-screwdriver-wrench"></i> Settings</a></li>
+    <li><a href="#" class="nav-item"><i class="fa-solid fa-wallet"></i> Wallet</a></li>
+    <li><a href="#" class="nav-item"><i class="fa-solid fa-comment-dots"></i> Inbox</a></li>
+    <li><a href="#" class="nav-item"><i class="fa-solid fa-calendar-days"></i> Plan</a></li>
+    <li><a href="#" class="nav-item"><i class="fa-solid fa-power-off"></i> Sign-Out</a></li>
+  </ul>
+</div>
+<!-- sidebar end  -->
+<!-- main content  -->
+<div class="main-content">
+  <!-- firstbar  -->
+  <div class="firstbar">
+      <p class="overwiew">Overview</p>
+      <p><a href="#" class="logo"><img src="assets/apice logomark.png" alt=""></a></p>
+  </div>
+  <div class="phonefirstbar">
+      <i class="fa-solid fa-list"></i>
+      <p class="overwiew">Overview</p>
+      <p><a href="#" class="logo"><img src="assets/apice logomark.png" alt=""></a></p>
+  </div>
+  <!-- firstbar end  -->
+   <!-- blc display  -->
+  <div class="blcdisplay">
+      <p class="blctxt">TOTAL BALANCE</p>
+    <div class="balance-row">
+      <!-- Store the actual value in a data attribute -->
+      <p class="blcdisp" data-actual-balance="0.6789 BTC">0.6789 BTC</p>
+      <div class="hide-balance-container">
+      <span class="hide-text">Hide balance</span>
+      <input type="checkbox" id="balanceToggle" class="toggle-checkbox" checked>
+      <label for="balanceToggle" class="toggle-label"></label>
+      </div>
+    </div>
+  </div>
+  <!-- blc display end  -->
+  <!-- acctbasic  -->
+  <div class="acctbasic">
+    <p class="acctnumactive">208176432 - <span style="color: #008000;">Active</span></p>
+    <p class="acctnumnotactive">208176432 - <span style="color: #ff0000;">Not Active</span></p>
+      <hr class="acctbasichr">
+    <p class="acctname">JOHN DOE</p>
+  </div>
+  <!-- acctbasic end  -->
+   <!-- tradesum  -->
+  <div class="tradesum">
+    <p class="tradeinfo">Trade Session</p>
+      <span class="tnonactive">📊🔴</span>
+      <span class="tactive">📊🟢</span>
+  </div> 
+  <!-- tradesum end  -->
+   <!-- swiftl  -->
+  <div class="swiftl">
+    <p class="swiftlinks">sWiftLinks</p>
+  </div>
+      <hr class="swiftlinkhr">
+    <!-- gridcontainer 1  -->
+    <div class="grid-container">
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i id="swifticon" class="fa-solid fa-calendar-days"></i> </span>
+        </div>
+        <p class="swiftp">Plan</p>
+      </div>
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon" class="fa-solid fa-id-card-clip"></i></span>
+        </div>
+        <p class="swiftp">Trader</p>
+      </div>
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon"  class="fa-solid fa-user-shield"></i> </span>
+        </div>
+        <p class="swiftp">Security</p>
+      </div>
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon" class="fa-solid fa-money-bill-transfer"></i> </span>
+        </div>
+        <p class="swiftp">Withdraw</p>
+      </div>
+    </div>
+    <!-- grid container 1 end  -->
+      <hr class="swiftlinkhr">
+    <!-- grid container 2  -->
+    <div class="grid-container">
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon" class="fa-brands fa-cc-mastercard"></i> </span>
+        </div>
+        <p class="swiftp">Cards</p>
+      </div>
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon" class="fa-solid fa-screwdriver-wrench"></i> </span>
+        </div>
+        <p class="swiftp">Settings</p>
+      </div>
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon" class="fa-solid fa-clock-rotate-left"></i> </span>
+        </div>
+        <p class="swiftp">History</p>
+      </div>
+      <div class="box">
+        <div class="boxcontainer">
+            <span class="innercontainer"> <i   id="swifticon" class="fa-solid fa-comment-dots"></i> </span>
+        </div>
+        <p class="swiftp">Support</p>
+      </div>
+    </div>
+    <!-- grid container 2 end  -->
+      <hr class="swiftlinkhr">
+</div>
+<!-- main content end  -->
+<div class="lastbar">
+<p>&copy; 2026 Apice Technologies. All Rights Reserved.</p>
+</div>
+</body>
+</html>
